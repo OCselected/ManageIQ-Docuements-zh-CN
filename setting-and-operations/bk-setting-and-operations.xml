@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0"
+    xml:id="manageiq-setting-and-operations-manual">
+    <title>ManageIQ 设置和运维</title>
+    <?rax title.font.size="28px" subtitle.font.size="28px"?>
+    <titleabbrev>ManageIQ 设置和运维</titleabbrev>
+    <info>
+        <author>
+            <personname>
+                <firstname/>
+                <surname/>
+            </personname>
+            <affiliation>
+                <orgname>Open Cloud Selected</orgname>
+            </affiliation>
+        </author>
+        <copyright>
+            <year>2015</year>
+            <holder>开放云精选</holder>
+        </copyright>
+        <releaseinfo>current</releaseinfo>
+        <productname>ManageIQ</productname>
+        <pubdate/>
+        <legalnotice role="apache2">
+            <annotation>
+                <remark>Copyright details are filled in by the template.</remark>
+            </annotation>
+        </legalnotice>
+        <legalnotice role="cc-by-sa">
+            <annotation>
+                <remark>Remaining licensing details are filled in by the template.</remark>
+            </annotation>
+        </legalnotice>
+        <abstract>
+            <para>ManageIQ 提供了cloud management platform的一个实现。
+            </para>
+        </abstract>
+        <revhistory>
+            <!-- ... continue adding more revisions here as you change this document using the markup shown below... -->
+            <revision>
+                   <date>2015-04-01</date>
+                   <revdescription>
+                   </revdescription>
+            </revision>
+        </revhistory>
+    </info>
+    <!-- Chapters are referred from the book file through these include statements. You can add additional chapters using these types of statements. -->
+    <!--<xi:include href="../common/ch_preface.xml"/>-->
+    <xi:include href="../common/ch_getstart.xml"/>
+    <xi:include href="../common/app_support.xml"/>
+</book>
