@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="5.0"
+  xml:id="ch_alerts-manageiq">
+    <title>Get started with ManageIQ</title>
+    <para xml:id="alerts-para1">The ManageIQ project is an open source cloud
+        </para>
+    <para xml:id="alerts-para2">
+    </para>
+<!--
+    <para xml:id="para3">The following table describes the OpenStack
+        services that make up the OpenStack architecture:</para>
+    <table rules="all" xml:id="table1" width="85%">
+        <caption>OpenStack services</caption>
+        <col width="15%"/>
+        <col width="15%"/>
+        <col width="70%"/>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Project name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><link
+                    xlink:href="http://www.openstack.org/software/openstack-dashboard/"
+                    ><glossterm>Dashboard</glossterm></link>
+                </td>
+                <td><link
+                    xlink:href="http://docs.openstack.org/developer/horizon/"
+                    ><glossterm>Horizon</glossterm></link>
+                </td>
+                <td>Provides a web-based self-service portal
+                 to interact with underlying OpenStack services,
+                 such as launching an instance, assigning IP
+                 addresses and configuring access controls.</td>
+            </tr>
+            <tr>
+                <td><link
+                        xlink:href="http://www.openstack.org/software/openstack-compute/"
+                        ><glossterm>Compute</glossterm></link>
+                </td>
+                <td><link
+                        xlink:href="http://docs.openstack.org/developer/nova/"
+                        ><glossterm>Nova</glossterm></link>
+                </td>
+                <td>Manages the lifecycle of compute instances in an
+                    OpenStack environment. Responsibilities include
+                    spawning, scheduling and decommissioning of virtual
+                    machines on demand.</td>
+            </tr>
+            <tr>
+                <td><link
+                        xlink:href="http://www.openstack.org/software/openstack-networking/"
+                        ><glossterm>Networking</glossterm></link>
+                </td>
+                <td><link
+                        xlink:href="http://docs.openstack.org/developer/neutron/"
+                        ><glossterm>Neutron</glossterm></link>
+                </td>
+                <td>Enables Network-Connectivity-as-a-Service for
+                    other OpenStack services, such as OpenStack Compute.
+                    Provides an API for users to define networks and the
+                    attachments into them. Has a pluggable architecture
+                    that supports many popular networking vendors and
+                    technologies.</td>
+            </tr>
+            <tr><th colspan="3" align="center">Storage</th></tr>
+            <tr>
+                <td><link
+                    xlink:href="http://www.openstack.org/software/openstack-storage/"
+                    ><glossterm>Object Storage</glossterm></link>
+                </td>
+                <td><link
+                    xlink:href="http://docs.openstack.org/developer/swift/"
+                    ><glossterm>Swift</glossterm></link>
+                </td>
+                <td>Stores and retrieves arbitrary unstructured
+                    data objects via a <glossterm>RESTful</glossterm>,
+                    HTTP based API. It is highly fault tolerant with
+                    its data replication and scale-out architecture.
+                    Its implementation is not like a file server with
+                    mountable directories. In this case, it writes
+                    objects and files to multiple drives, ensuring the
+                    data is replicated across a server cluster.</td>
+            </tr>
+            <tr>
+                <td><link
+                    xlink:href="http://www.openstack.org/software/openstack-storage/"
+                    ><glossterm>Block Storage</glossterm></link>
+                </td>
+                <td><link
+                    xlink:href="http://docs.openstack.org/developer/cinder/"
+                    ><glossterm>Cinder</glossterm></link>
+                </td>
+                <td>
+                    Provides persistent block storage to running instances. Its
+                    pluggable driver architecture facilitates the creation and
+                    management of block storage devices.</td>
+            </tr>
+            <tr><th colspan="3" align="center">Shared services</th></tr>
+            <tr>
+                <td><link
+                        xlink:href="http://www.openstack.org/software/openstack-shared-services/"
+                        ><glossterm>Identity service</glossterm></link>
+                </td>
+                <td><link
+                        xlink:href="http://docs.openstack.org/developer/keystone/"
+                        ><glossterm>Keystone</glossterm></link>
+                </td>
+                <td>Provides an authentication and authorization service
+                    for other OpenStack services. Provides a catalog of endpoints
+                    for all OpenStack services.</td>
+            </tr>
+            <tr>
+                <td><link
+                        xlink:href="http://www.openstack.org/software/openstack-shared-services/"
+                        ><glossterm>Image Service</glossterm></link>
+                </td>
+                <td><link
+                        xlink:href="http://docs.openstack.org/developer/glance/"
+                        ><glossterm>Glance</glossterm></link>
+              </td>
+                <td>Stores and retrieves virtual machine disk images.
+                    OpenStack Compute makes use of this during instance
+                    provisioning.
+                </td>
+            </tr>
+
+            <tr>
+                <td><link
+                        xlink:href="http://www.openstack.org/software/openstack-shared-services/"
+                        ><glossterm>Telemetry</glossterm></link>
+                </td>
+                <td><link
+                        xlink:href="http://docs.openstack.org/developer/ceilometer/"
+                        ><glossterm>Ceilometer</glossterm></link>
+                </td>
+                <td>Monitors and meters the OpenStack cloud for
+                    billing, benchmarking, scalability, and statistical
+                    purposes.</td>
+            </tr>
+
+            <tr><th colspan="3" align="center">Higher-level services</th></tr>
+            <tr>
+                <td><link
+                        xlink:href="http://www.openstack.org/software/openstack-shared-services/"
+                        ><glossterm>Orchestration</glossterm></link></td>
+                <td><link
+                        xlink:href="http://docs.openstack.org/developer/heat/"
+                        ><glossterm>Heat</glossterm></link>
+                </td>
+                <td>Orchestrates multiple composite cloud applications by using
+                    either the native <glossterm baseform="Heat Orchestration
+                        Template (HOT)">HOT</glossterm> template format or the
+                    AWS CloudFormation template format, through both an
+                    OpenStack-native REST API and a CloudFormation-compatible
+                    Query API.</td>
+            </tr>
+            <tr>
+                <td><link
+                        xlink:href="http://www.openstack.org/software/openstack-shared-services/"
+                        ><glossterm>Database Service</glossterm></link>
+                </td>
+                <td><link
+                        xlink:href="http://docs.openstack.org/developer/trove/"
+                        ><glossterm>Trove</glossterm></link>
+                </td>
+                <td>Provides scalable and reliable Cloud Database-as-a-Service
+                   functionality for both relational and non-relational database
+                   engines.</td>
+            </tr>
+        </tbody>
+    </table>
+    <xi:include href="section_getstart_conceptual_arch.xml"/> -->
+    <?hard-pagebreak?>
+</chapter>
